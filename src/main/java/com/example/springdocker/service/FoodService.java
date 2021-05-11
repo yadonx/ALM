@@ -21,7 +21,7 @@ public class FoodService {
         repository.save(food);
     }
 
-    public List<String> getCookableFoods() {
+    public List<String> getCookAbleFoods() {
         // hämtar alla Foods som vi kan laga
         List<Food> cookableFoods = repository.findFoodByCanICookIt(true);
 

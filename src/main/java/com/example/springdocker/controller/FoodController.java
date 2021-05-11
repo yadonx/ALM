@@ -27,6 +27,6 @@ public class FoodController {
 
     @GetMapping("/foods/cookable")
     public List<String> getCookAbleFoods() {
-        return service.getCookableFoods();
+        return service.getCookAbleFoods();
     }
 }
