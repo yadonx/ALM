@@ -26,7 +26,7 @@ public class CarService {
         List<Car> carsWithWheels = repository.findCarByHaveFourWheels(true);
 
         return carsWithWheels.stream()
-                .map(food -> food.getName())
+                .map(Car::getName)
                 .collect(Collectors.toList());
     }
 }
