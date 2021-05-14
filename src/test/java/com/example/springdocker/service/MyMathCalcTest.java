@@ -28,7 +28,6 @@ class MyMathCalcTest {
     @Test
     void add() {
         assertEquals(7, mathCalc.add(5,2));
-
     }
 
     @DisplayName("Multiply five by two")
