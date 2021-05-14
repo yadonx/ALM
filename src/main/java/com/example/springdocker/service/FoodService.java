@@ -27,7 +27,7 @@ public class FoodService {
 
         // returnerar endast Food namnen i en lista
         return cookableFoods.stream()
-                .map(food -> food.getName())
+                .map(Food::getName)
                 .collect(Collectors.toList());
     }
 }
