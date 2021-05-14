@@ -1,5 +1,7 @@
 package com.example.springdocker.service;
 
+import com.example.springdocker.service.exception.DivideByZero;
+
 /**
  * Created by Emil Johansson
  * Date: 2021-05-12
@@ -17,7 +19,10 @@ public class MyMathCalc {
         return a*b;
     }
   
-    public double divide(int a, int b){
+    public double divide(double a, double b){
+        if (b == 0)
+            throw new DivideByZero("Cannot divide by zero");
+
         return a/b;
     }
 }
