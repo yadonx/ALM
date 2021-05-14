@@ -17,8 +17,8 @@ public class FoodService {
         return repository.findAll();
     }
 
-    public void saveNewFood(Food food) {
-        repository.save(food);
+    public Food saveNewFood(Food food) {
+        return repository.save(food);
     }
 
     public List<String> getCookAbleFoods() {
@@ -27,7 +27,7 @@ public class FoodService {
 
         // returnerar endast Food namnen i en lista
         return cookableFoods.stream()
-                .map(food -> food.getName())
+                .map(Food::getName)
                 .collect(Collectors.toList());
     }
 }
