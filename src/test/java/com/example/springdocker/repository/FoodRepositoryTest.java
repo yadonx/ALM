@@ -1,10 +1,7 @@
 package com.example.springdocker.repository;
 
 import com.example.springdocker.model.Food;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
@@ -27,8 +24,8 @@ class FoodRepositoryTest {
     @Autowired
     FoodRepository repo;
 
-    @BeforeEach
-     void init(){
+    @AfterEach
+     void tearDown(){
         repo.deleteAll();
     }
 
