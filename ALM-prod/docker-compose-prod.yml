@@ -22,8 +22,8 @@ services:
     depends_on:
       - mongo
 
-  cars:
-    image: alm_cars
+  cars-food:
+    image: yadonx/alm-project
     ports:
       - 8085:8080
     environment:
